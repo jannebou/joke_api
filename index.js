@@ -19,16 +19,12 @@ app.get('/ping', (req, res) => {
   res.send('pong');
 });
 
-app.get('/random_joke', (req, res) => {
-  res.json(randomJoke());
-});
-
-app.get('/random_ten', (req, res) => {
-  res.json(randomTen());
-});
-
 app.get('/jokes/random', (req, res) => {
   res.json(randomJoke());
+});
+
+app.get('/jokes/count', (req, res) => {
+  res.json({ "count": count });
 });
 
 app.get("/jokes/random/:num", (req, res) => {
